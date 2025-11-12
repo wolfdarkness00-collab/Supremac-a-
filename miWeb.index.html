@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Diavlo</title>
+    <link rel="icon" type="image/jpg" href="https://i.postimg.cc/Y09MF0Dr/FB-IMG-1743121368017.jpg">
+    <style>  
+        body {
+            margin: 0;
+            font-family: Times New Roman, sans-serif;
+            background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+                        url("https://i.postimg.cc/hvW6Ytwp/d236b3f9bccb78e40cd39f68afce9205.jpg") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        h1 { color: DarkGreen; text-align: center; 
+        border: 10px solid;
+        border-color: Black
+        background-size: cover;
+        background-color: black;}
+        p { font-size: 16px; margin: 20px; padding: 10px; border: 10px solid #ccc; }
+        ul { list-style-type: square; }
+        
+        /* Estilos de pestañas */
+        .tab-container { 
+            display: flex; 
+            border-bottom: 2px solid #ccc; 
+            margin-bottom: 20px; 
+        }
+        .tab { 
+            flex: 1; 
+            padding: 12px; 
+            text-align: center; 
+            cursor: pointer; 
+            font-weight: bold;
+            color: #555; 
+            border-bottom: 3px solid transparent; 
+            transition: 0.3s; 
+        }
+        .tab:hover { 
+            background-color: #f5f5f5; 
+        }
+        .tab.active { 
+            color: DarkRed; 
+            border-bottom: 3px solid darkblue; 
+        }
+        /* Contenido de pestañas */
+        .tab-content { 
+            display: none; 
+            animation: fadeIn 0.5s; 
+        }
+        .tab-content.active { 
+            display: block; 
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>SHIBUYA</h1>
+    
+    <!-- Sistema de pestañas -->
+    <div class="tab-container">
+        <div class="tab active" onclick="openTab(event, 'tab1')">Página</div>
+        <div class="tab" onclick="openTab(event, 'tab2')">Información</div>
+        <div class="tab" onclick="openTab(event, 'tab3')">Videos</div>
+        <div class="tab" onclick="openTab(event, 'tab4')">Contacto</div> <!-- Nueva pestaña -->
+    </div>
+
+    <!-- Contenido de las pestañas -->
+    <div id="tab1" class="tab-content active">
+        <p>Supremacía ☠️</p>
+        <p>Hilo de araña🕸️</p>
+        <p>Suantario Malévolo ☠️</p>
+        <ul>
+            <li>Vacío infinito</li>
+            <li>Azul 🔵</li>
+            <li>Rojo 🔴</li>
+ <li>Púrpura 🟣</li>
+        </ul>
+        <button onclick="alert('¡Desmantelar!')">Supremacía</button>
+        <a href="" target="_blank"</a>expansión de dominio</a>
+    </div>
+
+    <div id="tab2" class="tab-content">
+        <h2>Información</h2>
+        <p>Jujutsu kaisen.</p>
+    </div>
+    
+    <div id="tab3" class="tab-content">
+        <h2>videos</h2>
+        <video width="600" controls>
+  <source src="ab160acd67fb445a5f564d301aec5db5.mp4" type="video/mp4">
+  Tu navegador no soporta la etiqueta de video.
+</video>
+
+                           
+       
+    </div>
+
+    <div id="tab4" class="tab-content">
+        <style>
+            body{
+                background-color: Yellow;
+                background-size:cover
+            }
+        </style>
+        <body>
+        <h2>Contacto</h2>
+        <pContacto:</p>
+        <ul>
+            <li>Email: johantapia.e@gmail.com</li>
+            <li>Teléfono:3106213445</li>
+            <li>Dirección: Que más quieres a mi casa no vas a ir</li>
+            
+        </ul>
+        </body>
+    </div>
+
+    <script>
+        function openTab(evt, tabId) {
+            // Ocultar todos los contenidos
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(c => c.classList.remove('active'));
+            // Quitar "active" de todas las pestañas
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(t => t.classList.remove('active'));
+            // Mostrar el contenido seleccionado
+            document.getElementById(tabId).classList.add('active');
+            // Activar la pestaña clicada
+            evt.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
